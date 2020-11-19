@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LDRAW .dat parser</title>
+	</head>
+	<body>
+		<script src="DATColors.js"></script>
+		<script src="DATParser.js"></script>
+
+		<!-- let's test this -->
+		<script>
+
+			datFile = "92745.dat";    // simple cylinder
+			mesh = DATParser.parseFile(datFile);
+
+			var obj = DATParser.toOBJ(mesh);
+			document.body.innerHTML += "<pre># " + datFile + "\n" + obj + "</pre>";
+		</script>
+	</body>
+</html>
